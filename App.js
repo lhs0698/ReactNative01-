@@ -8,7 +8,8 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <TextInput style={styles.idInput} autoCapitalize = 'none'  placeholder='ID'/>
-      <TextInput style={styles.pwInput} autoCapitalize = 'none' secureTextEntry={true} placeholder='PASSWORD'/> 
+      <TextInput style={styles.pwInput} autoCapitalize = 'none' secureTextEntry={true} placeholder='PASSWORD'/>
+      // autoCapitalize는 첫글자는 대문자 기능 막기 
       <TouchableOpacity style={styles.loginButton}><Text style={styles.loginText}>로그인</Text></TouchableOpacity>
       <TouchableOpacity style={styles.newUser}><Text style={styles.loginText}>회원가입</Text></TouchableOpacity>
     </SafeAreaView>
