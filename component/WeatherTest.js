@@ -5,8 +5,8 @@ import { Fontisto } from '@expo/vector-icons';
 
 export default function Weather() {
   const [temp, setTemp] = useState();
-  const [weather, setWeather] = useState();
-
+  const [weather, setWeather] =  useState();
+  
   const icons = {
     "Thunderstorm": "lightning",
     "Drizzle": "rains",
@@ -32,8 +32,6 @@ export default function Weather() {
   });
   // fetch 사용, 날씨 api 적용시키기
   // openWeather api 사용 시 API KEY 부분 뒤에 &units=metric를 붙이면 섭씨 온도로 변환한다. &units=imperial => 화씨 온도 적용 시 사용한다.
-  
-  
 
   return (
     <SafeAreaView style={styles.container}>
