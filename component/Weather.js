@@ -7,6 +7,7 @@ export default function Weather() {
   const [temp, setTemp] = useState();
   const [weather, setWeather] = useState();
 
+  // Fontisto 사용, 날씨에 따른 icon 변경
   const icons = {
     Thunderstorm: "lightning",
     Drizzle: "rains",
@@ -15,6 +16,7 @@ export default function Weather() {
     Atmosphere: "cloudy-gusts",
     Clear: "day-sunny",
     Clouds: "cloudy",
+    Mist: "fog"
   };
 
   // ios app은 한 번 ‘허용 안 함’을 누르면 그 다음번에 앱을 실행해도 permission을 구하는 창이 다시는 뜨지 않으므로 폰의 ‘설정 -> expo ->위치 -> 사용하는 동안’ 에 수동으로 체크해줘야한다
@@ -34,7 +36,7 @@ export default function Weather() {
     )
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data)
+        console.log(data)
         const temp = data.main.temp;
         const temps = temp.toFixed([1]); // toFixed는 소수점 반올림 시 사용한다.
         const weather = data.weather[0].main;
@@ -62,16 +64,17 @@ export default function Weather() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    // flexDirection: "row",
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
   },
   temp: {
-    fontSize: 80,
+    fontSize: 100,
     fontWeight: "800",
   },
   weather: {
-    fontSize: 70,
+    fontSize: 90,
     marginBottom: 10,
   },
 });
