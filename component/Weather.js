@@ -19,7 +19,8 @@ export default function Weather() {
     Mist: "fog"
   };
 
-  // ios app은 한 번 ‘허용 안 함’을 누르면 그 다음번에 앱을 실행해도 permission을 구하는 창이 다시는 뜨지 않으므로 폰의 ‘설정 -> expo ->위치 -> 사용하는 동안’ 에 수동으로 체크해줘야한다
+  // ios app은 한 번 ‘허용 안 함’을 누르면 그 다음번에 앱을 실행해도 
+  // permission을 구하는 창이 다시는 뜨지 않으므로 폰의 ‘설정 -> expo ->위치 -> 사용하는 동안’ 에 수동으로 체크해줘야한다
   const getLocation = async () => {
     try {
       await Location.requestForegroundPermissionsAsync(); // 앱 내에서 사용자의 위치사용에 대한 허가를 요청한다
