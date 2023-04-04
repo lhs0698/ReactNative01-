@@ -27,7 +27,7 @@ export default function Weather() {
       const locationData = await Location.getCurrentPositionAsync();
       console.log(locationData)
     } catch (error) {
-      alert('거절')
+      
     }
   };
 
